@@ -16,13 +16,11 @@ class Solution:
         while right >= left:
             mid = (left + right) // 2
             i = guess(mid)
-            print(mid)
             if i == 1:             
                 left = mid + 1     
             elif i == -1:
                 right = mid - 1
             elif i == 0:
-                print("k")
                 return mid
             else:
                 print("bug")
