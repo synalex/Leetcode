@@ -27,11 +27,7 @@ class Solution:
         
         # iterative 
         # O(n) time, O(1) space
-        if n == 0: return 0
-        elif n == 1: return 1
-        else:
-            res = (0, 1)
-            for i in range(2, n+1):
-                res = (res[1], res[0] + res[1])
-
-            return res[1]
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
